@@ -6,15 +6,12 @@ const Footer = () => {
   return (
     <footer className="border-t border-gray-100 bg-white">
 
-      {/* Main Footer */}
+     
       <div className="mx-auto grid max-w-[1180px] gap-8 px-6 py-12 md:grid-cols-2 lg:grid-cols-4">
 
-        {/* Logo & Description */}
+       
         <div>
-          <img
-            src={logo}
-            alt="Dev Stack"
-            className="h-7 w-auto"
+          <img src={logo} alt="Dev Stack" className="h-7 w-auto"
           />
 
           <p className="mt-4 max-w-[320px] text-xs leading-5 text-gray-500">
@@ -22,7 +19,7 @@ const Footer = () => {
             building modern software.
           </p>
 
-          {/* Social Links */}
+          
           <div className="mt-5 flex gap-5 text-xs text-gray-700">
             <a href="#">GitHub</a>
             <a href="#">Twitter</a>
@@ -30,7 +27,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Product */}
+       
         <div>
           <h3 className="text-xs font-semibold text-gray-900">
             PRODUCT
@@ -43,7 +40,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Company */}
+      
         <div>
           <h3 className="text-xs font-semibold text-gray-900">
             COMPANY
@@ -56,7 +53,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Legal */}
+       
         <div>
           <h3 className="text-xs font-semibold text-gray-900">
             LEGAL
@@ -70,7 +67,7 @@ const Footer = () => {
 
       </div>
 
-      {/* Bottom Footer */}
+      
       <div className="mx-auto flex max-w-[1180px] flex-col gap-3 border-t border-gray-100 px-6 py-6 text-xs text-gray-400 sm:flex-row sm:items-center sm:justify-between">
 
         <p>
