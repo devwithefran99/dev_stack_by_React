@@ -11,6 +11,7 @@ const Nav = () => {
     "About",
     "Contact",
   ];
+  const logo = "/logo-text.png"
 
   return (
     <nav className="border-b border-gray-100 bg-white shadow-md">
@@ -26,11 +27,7 @@ const Nav = () => {
 
        
         <a href="#">
-          <img
-            src="/src/assets/images/logo-text.png"
-            alt="DevStack"
-            className="h-7 w-auto"
-          />
+          <img src={logo} alt="DevStack" className="h-7 w-auto"/>
         </a>
 
         
@@ -58,7 +55,7 @@ const Nav = () => {
 
           <a
             href="#"
-            className="rounded-full bg-pink-600 px-4 py-2 text-[11px] text-white"
+            className="rounded bg-pink-600 px-4 py-2 text-[11px] text-white"
           >
             Sign Up
           </a>

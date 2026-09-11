@@ -1,6 +1,7 @@
-import bannerStack from "../../images/banner-stack.png";
+
 
 const Hero = () => {
+    const banner = '/banner-stack.png'
   return (
     <section className="py-10 lg:py-8">
       <div className="mx-auto flex max-w-[1180px] flex-col items-center gap-8 px-6 lg:flex-row lg:justify-between">
@@ -37,7 +38,7 @@ const Hero = () => {
         </div>
 
         <div className="w-full lg:w-[42%]">
-          <img src={bannerStack} alt="Hero" className="mx-auto w-[280px] lg:w-[350px]" />
+          <img src={banner} alt="Hero" className="mx-auto w-[280px] lg:w-[350px]" />
         </div>
 
       </div>
