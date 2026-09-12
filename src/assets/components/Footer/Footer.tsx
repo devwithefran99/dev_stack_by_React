@@ -30,7 +30,7 @@ const Footer = () => {
        
         <div>
           <h3 className="text-xs font-semibold text-gray-900">
-            PRODUCT
+            Product
           </h3>
 
           <div className="mt-4 flex flex-col gap-2 text-xs text-gray-500">
@@ -43,7 +43,7 @@ const Footer = () => {
       
         <div>
           <h3 className="text-xs font-semibold text-gray-900">
-            COMPANY
+            Company
           </h3>
 
           <div className="mt-4 flex flex-col gap-2 text-xs text-gray-500">
@@ -56,7 +56,7 @@ const Footer = () => {
        
         <div>
           <h3 className="text-xs font-semibold text-gray-900">
-            LEGAL
+            Legal
           </h3>
 
           <div className="mt-4 flex flex-col gap-2 text-xs text-gray-500">
