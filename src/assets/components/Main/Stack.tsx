@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { technologies } from '../dataType/StackType';
 import { IoIosStar } from 'react-icons/io';
+import MyStack from '../MyStack/MyStack';
 
 
 const Stack = () => {
@@ -14,8 +15,21 @@ const Stack = () => {
   if (!alreadyAdded) {
     setSelectedTech([...selectedTech, technology]);
   }
+ 
 
   console.log(alreadyAdded);
+};
+ const handleRemove = (name: string) => {
+  const remainingTech = selectedTech.filter(
+    (technology) => technology.name !== name
+  );
+
+  console.log(remainingTech);
+
+  setSelectedTech(remainingTech);
+};
+const handleRemoveAll = () => {
+   setSelectedTech([])
 };
 
  
@@ -25,12 +39,19 @@ const Stack = () => {
     <div className='container mx-auto'>
        <h2>Explore the Technologies</h2>
        
-       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+     <div className='grid gap-6 lg:grid-cols-3'>
+        <div className='lg:col-span-2'>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {technologies.map((technology) => {
+            const isSelected = selectedTech.some(
+    (item) => item.name === technology.name
+  );
           return (
           <div
   key={technology.name}
-  className="rounded-lg border border-gray-200 p-4"
+ className={`rounded-lg border p-4 ${
+  isSelected ? "border-green-500" : "border-gray-200"
+}`}
 >
   <div className="flex items-start justify-between">
   <div>
@@ -62,11 +83,11 @@ const Stack = () => {
     <span className='text-yellow-600 '><IoIosStar /></span> {technology.rating}
   </p>
 
-  <button
+  <button disabled={isSelected}
   onClick={() => handleAdd(technology)}
-  className="mt-4 w-full rounded-md bg-gray-900 py-2 text-xs text-white"
+  className="mt-4 w-full rounded-md bg-gray-900 py-2 text-xs text-white cursor-pointer"
 >
-  Add to Stack
+  {isSelected ? "Added" : "Add to Stack"}
 </button>
 </div>
           )
@@ -74,7 +95,13 @@ const Stack = () => {
 
         )}
        </div>
+        </div>
+       <div>
+      <MyStack selectedTech={selectedTech} handleRemove={handleRemove} handleRemoveAll={handleRemoveAll} />
+       </div>
+     </div>
     </div>
+    
     
   );
 };
