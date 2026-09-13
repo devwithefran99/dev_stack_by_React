@@ -14,8 +14,8 @@ const Nav = () => {
   const logo = "/logo-text.png"
 
   return (
-    <nav className="border-b border-gray-100 bg-white shadow-md">
-      <div className="mx-auto flex h-[52px] max-w-[1180px] items-center justify-between px-4 ">
+    <nav className="border-b border-gray-100 bg-white shadow-md sticky top-0 z-50">
+      <div className="mx-auto flex h-13 max-w-295 items-center justify-between px-4 ">
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -64,8 +64,7 @@ const Nav = () => {
               <a
                 key={item}
                 href="#"
-                className="text-sm text-gray-600"
-              >
+                className="text-sm text-gray-600">
                 {item}
               </a>
             ))}

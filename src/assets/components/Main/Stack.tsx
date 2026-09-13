@@ -1,43 +1,49 @@
-import React, { useState } from 'react';
-import { technologies } from '../dataType/StackType';
+import  { useState } from 'react';
+import { technologies, type Technology } from '../dataType/StackType';
 import { IoIosStar } from 'react-icons/io';
 import MyStack from '../MyStack/MyStack';
+import { toast } from 'react-toastify';
 
 
 const Stack = () => {
-  const [selectedTech, setSelectedTech] = useState([])
+  const [selectedTech, setSelectedTech] =  useState<Technology[]>([]);
 
-  const handleAdd = (technology) => {
+  const handleAdd = (technology : Technology) => {
   const alreadyAdded = selectedTech.some(
-    (item) => item.name === technology.name
+    (item) => item.id === technology.id
   );
 
   if (!alreadyAdded) {
     setSelectedTech([...selectedTech, technology]);
+    toast.success(`${technology.name} added to stack!`);
+  } else {
+    toast.info(`${technology.name} already in stack`);
   }
  
 
   console.log(alreadyAdded);
 };
- const handleRemove = (name: string) => {
+ const handleRemove = (id: number) => {
+  const techToRemove = selectedTech.find((technology) => technology.id === id);
+
   const remainingTech = selectedTech.filter(
-    (technology) => technology.name !== name
+    (technology) => technology.id !== id
   );
-
-  console.log(remainingTech);
-
+  // console.log(remainingTech)
   setSelectedTech(remainingTech);
+  toast.error(`${techToRemove?.name} removed from stack`);
 };
 const handleRemoveAll = () => {
    setSelectedTech([])
+    toast.warn('All technologies removed!');
 };
 
  
   // console.log(technologies);
  
   return (
-    <div className='container mx-auto max-w-[1180px]'>
-       <h2 className='font-bold text-4xl mb-3'>Explore the <span className='bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent'>Technologies</span> </h2>
+    <div className='container mx-auto max-w-295'>
+       <h2 className='font-bold text-4xl mb-3'>Explore the <span className='bg-linear-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent'>Technologies</span> </h2>
        
      <div className='grid gap-6 lg:grid-cols-3'>
         <div className='lg:col-span-2'>
@@ -48,18 +54,14 @@ const handleRemoveAll = () => {
   );
           return (
           <div
-  key={technology.name}
+  key={technology.id}
  className={`rounded-lg border p-4 ${
   isSelected ? "border-green-500 bg-green-50" : "border-gray-200"
 }`}
 >
   <div className="flex items-start justify-between">
   <div>
-    <img
-      src={technology.image}
-      alt={technology.name}
-      className="h-10 w-10"
-    />
+    <img src={technology.image} alt={technology.name} className="h-10 w-10" />
 
     <h3 className="mt-3 text-sm font-semibold text-gray-800">
       {technology.name}

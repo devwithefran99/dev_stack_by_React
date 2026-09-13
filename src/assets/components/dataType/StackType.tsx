@@ -1,4 +1,5 @@
 export interface Technology {
+    id: number;
   name: string;
   category: string;
   level: string;
@@ -8,6 +9,7 @@ export interface Technology {
 }
 export const technologies: Technology[] = [
   {
+    id: 1,
     name: "React",
     category: "Frontend",
     level: "Popular",
@@ -16,6 +18,7 @@ export const technologies: Technology[] = [
       description: "A declarative, component-based JavaScript library for building modern user",
   },
   {
+    id:2,
     name: "Vue.js",
     category: "Frontend",
     level: "Versatile",
@@ -24,6 +27,7 @@ export const technologies: Technology[] = [
       description: "An approachable, performant, and versatile framework for building web user interfaces.",
   },
   {
+    id:3,
     name: "Node.js",
     category: "Backend",
     level: "Standard",
@@ -32,6 +36,7 @@ export const technologies: Technology[] = [
       description: "An asynchronous event-driven JavaScript runtime built on Chrome's V8 engine.",
   },
   {
+    id:4,
     name: "Next.js",
     category: "Backend",
     level: "SSR/Edge",
@@ -40,6 +45,7 @@ export const technologies: Technology[] = [
       description: "The React framework for full-stack webapplications with hybrid static.",
   },
   {
+    id : 5,
     name: "Svelte.js",
     category: "Backend",
     level: "Fast",
@@ -48,6 +54,7 @@ export const technologies: Technology[] = [
       description: "Cybernetically enhanced web apps with compile-time reactivity and zero virtual",
   },
   {
+    id:6,
     name: "PostgreSQL",
     category: "Database",
     level: "Fast",
@@ -56,6 +63,7 @@ export const technologies: Technology[] = [
       description: "A powerful, open-source object-relational database system with proven reliability.",
   },
   {
+    id:7,
     name: "Redis",
     category: "Database",
     level: "Cache",
@@ -64,6 +72,7 @@ export const technologies: Technology[] = [
       description: "In-memory data structure store used as a high-speed database, cache.",
   },
   {
+    id:8,
     name: "JavaScript",
     category: "Language",
     level: "Ubiquitous",
@@ -72,6 +81,7 @@ export const technologies: Technology[] = [
       description: "The versatile, ubiquitous scripting language powering dynamic behavior.",
   },
   {
+    id:9,
     name: "TypeScript",
     category: "Language",
     level: "Essential",
@@ -80,6 +90,7 @@ export const technologies: Technology[] = [
       description: "A strongly typed programming language that builds on JavaScript for robust tooling.",
   },
   {
+    id : 10,
     name: "Java",
     category: "Robust",
     level: "Language",
@@ -88,6 +99,7 @@ export const technologies: Technology[] = [
       description: "A powerful, open-source object-relational database system with proven reliability.",
   },
   {
+    id: 11, 
     name: "Tailwind CSS",
     category: "Styling",
     level: "Modern",
@@ -96,6 +108,7 @@ export const technologies: Technology[] = [
       description: "A powerful, open-source object-relational database system with proven reliability.",
   },
   {
+    id : 12,
     name: "Docker",
     category: "DevOps",
     level: "Containers",

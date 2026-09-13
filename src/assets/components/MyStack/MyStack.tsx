@@ -5,7 +5,7 @@ import { FaRegTrashAlt } from 'react-icons/fa';
 
 interface MyStackProps {
   selectedTech: Technology[];
-   handleRemove: (name: string) => void;
+    handleRemove: (id: number) => void;
    handleRemoveAll: () => void;
 
 }
@@ -17,7 +17,7 @@ const MyStack = ({ selectedTech ,  handleRemove,handleRemoveAll}: MyStackProps) 
     My Stack
   </h3>
   <span className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-500">
-    {selectedTech.length} Selected
+    {selectedTech.length} Technology Selected
   </span>
 
      {selectedTech.length === 0 ? (
@@ -51,7 +51,7 @@ const MyStack = ({ selectedTech ,  handleRemove,handleRemoveAll}: MyStackProps) 
 
         <button
           className="text-xl text-red-500"
-          onClick={() => handleRemove(technology.name)}
+         onClick={() => handleRemove(technology.id)}
         >
           <MdCancel />
         </button>
