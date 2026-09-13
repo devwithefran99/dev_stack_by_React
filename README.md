@@ -8,6 +8,7 @@ A simple and user-friendly project built with React , TypeScirpt & tailwind
 - TypeScript
 - Tailwind CSS
 - React Icons
+- Vite
 - Daisy UI
 - react-toastify
 
