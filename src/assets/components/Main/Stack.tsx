@@ -36,8 +36,8 @@ const handleRemoveAll = () => {
   // console.log(technologies);
  
   return (
-    <div className='container mx-auto'>
-       <h2>Explore the Technologies</h2>
+    <div className='container mx-auto max-w-[1180px]'>
+       <h2 className='font-bold text-4xl mb-3'>Explore the <span className='bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent'>Technologies</span> </h2>
        
      <div className='grid gap-6 lg:grid-cols-3'>
         <div className='lg:col-span-2'>
@@ -50,7 +50,7 @@ const handleRemoveAll = () => {
           <div
   key={technology.name}
  className={`rounded-lg border p-4 ${
-  isSelected ? "border-green-500" : "border-gray-200"
+  isSelected ? "border-green-500 bg-green-50" : "border-gray-200"
 }`}
 >
   <div className="flex items-start justify-between">
@@ -74,7 +74,7 @@ const handleRemoveAll = () => {
 </p>
   </div>
 
-  <span className="rounded-full bg-gray-100 px-2 py-1 text-[9px] text-gray-500">
+  <span className="rounded-full bg-blue-100 px-2 py-1 text-[9px] text-blue-500">
     {technology.level}
   </span>
 </div>

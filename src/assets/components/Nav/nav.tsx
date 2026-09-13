@@ -36,12 +36,7 @@ const Nav = () => {
             <a
               key={item}
               href="#"
-              className={`text-[12px] ${
-                item === "Home"
-                  ? "text-pink-600 font-medium"
-                  : "text-gray-600"
-              }`}
-            >
+              className={"text-[12px] text-gray-600 "}>
               {item}
             </a>
           ))}
